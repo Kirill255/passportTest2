@@ -1,0 +1,33 @@
+body {
+  /*padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* для флеш-сообщений */
+#messages {
+  margin: 0;
+  padding: 0;
+}
+
+.success {
+  margin: 20px 0;
+  padding: 10px 0;
+  list-style-type: none;
+  background-color: #00ff00;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  margin: 20px 0;
+  padding: 10px 0;
+  list-style-type: none;
+  background-color: #ff0000;
+  font-weight: bold;
+  text-align: center;
+}
+/* end */

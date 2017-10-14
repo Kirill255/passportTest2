@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	.container
+		.row
+			.col-md-6.col-md-offset-3
+				h1.text-center #{title}
+				p.text-center Welcome to #{title}
+		//- при валидации формы регистрации
+		if errors
+			.row
+				.col-md-6.col-md-offset-3
+					each error in errors
+						.alert.alert-danger #{error.msg}
+		.row
+			.col-md-6.col-md-offset-3
+				form(method="POST", action="/register")
+					.form-group
+						label(for="name") Name
+						input#name.form-control(type="text", name="name", placeholder="Name")
+					.form-group
+						label(for="username") Username
+						input#username.form-control(type="text", name="username", placeholder="Username")
+					.form-group
+						label(for="email") Email
+						input#email.form-control(type="text", name="email", placeholder="Email")
+					.form-group
+						label(for="password") Password
+						input#password.form-control(type="password", name="password", placeholder="Password")
+					.form-group
+						label(for="passwordConfirm") Confirm Password
+						input#passwordConfirm.form-control(type="password", name="passwordConfirm", placeholder="Confirm Password")
+					button.btn.btn-primary(type="submit") Register
+					br
+					| Have An Account? 
+					a.btn.btn-default.btn-sm(href="/login") Login Now
